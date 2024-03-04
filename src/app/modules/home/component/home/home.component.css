@@ -1,0 +1,29 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 45px;
+    color: black;
+    text-align: center;
+
+  }
+
+  p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+ 
+  .current-date {
+    font-style: italic;
+    color: #999;
+  }
+  .dropdown-container[_ngcontent-ng-c3739054583] .dropdown[_ngcontent-ng-c3739054583]{
+    padding-top: 18px;
+  }
