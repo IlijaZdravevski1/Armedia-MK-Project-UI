@@ -1,1 +1,48 @@
-<p>person-details works!</p>
+<div class="container">
+    <div class="row mt-4">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-8">
+        <div class="row mb-3">Person Details</div>
+        <div class="row">
+          <ul ngbNav #nav="ngbNav" [(activeId)]="personId" class="nav-tabs">
+            <li [ngbNavItem]="1">
+              <button ngbNavLink>Contact Methods</button>
+              <ng-template ngbNavContent>
+                <div *ngIf="selectedPerson">
+                  <h3>Contact Methods</h3>
+                  <ul>
+                    <li *ngFor="let method of selectedPerson.contactMethods">
+                      {{ method.type }}: {{ method.value }}
+                    </li>
+                  </ul>
+                </div>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+              <button ngbNavLink>Addresses</button>
+              <ng-template ngbNavContent>
+                <div *ngIf="selectedPerson">
+                  <h3>Addresses</h3>
+                  <ul>
+                    <li *ngFor="let address of selectedPerson.postalAddresses">
+                      {{ address.streetAddress }}, {{ address.city }}, {{ address.zip }}, {{ address.country }}
+                    </li>
+                  </ul>
+                </div>
+              </ng-template>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  
+
+
+  
+  
+
+  
+

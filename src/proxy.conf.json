@@ -2,6 +2,10 @@
     "/auth": {
       "target": "http://localhost:9090",
       "secure": false
+    },
+    "/person": {
+      "target": "http://localhost:9090",
+      "secure": false
     }
   }
   

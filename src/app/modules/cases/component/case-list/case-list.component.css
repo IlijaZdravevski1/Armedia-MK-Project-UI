@@ -1,50 +1,27 @@
 
 @import "~bootstrap/dist/css/bootstrap.min.css";
-img[_ngcontent-ng-c2851571528]{
-    height: 75px;
-    width: auto;
-    margin-top: -40px;
-    margin-bottom: 22px;
+.custom-button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    
-  }
+.custom-button:hover {
+  background-color: #45a049; 
+}
 
-.custom-nav .navbar-nav .nav-item {
-    border-bottom: 1px solid gray;
-    border-top: 1px solid gray;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-  }
-  
-  .custom-nav .navbar-nav .nav-item:last-child {
-    border-bottom: 1px solid gray;
-    border-top: 1px solid gray;
-    border-left: 1px solid gray;
-    border-right: 1px solid gray;
-  }
-  
-  .custom-nav .navbar-nav .nav-link {
-    padding: 10px 20px;
-    text-decoration: none;
-    color: black;
-    border-radius: 15px;
-  }
-  .navbar-nav[_ngcontent-ng-c2851571528] {
-    padding-left: 10px;
-  }
-  
-  .custom-nav .navbar-nav .nav-link:hover,
-  .custom-nav .navbar-nav .nav-link.active {
-    background-color: white;
-  }
-  .navbar-brand[_ngcontent-ng-c3651022232] {
-    color: black;
-    font-style: italic;
-    font-size: 20px;
+.custom-button:active {
+  background-color: #3e8e41; 
+}
 
-  }
 
   
 

@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./case-list.component.css']
 })
 export class CaseListComponent {
+  createNewCase(): void {
+    window.location.href = '/home';
+  }
 
 }

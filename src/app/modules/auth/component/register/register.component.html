@@ -42,6 +42,7 @@
       .content-area {
         margin-left: 200px;
         padding: 20px;
+        padding-bottom: 150px;
       }
 
       footer {
@@ -79,124 +80,12 @@
             />
           </a>
           <div class="dropdown-container">
-            <div class="dropdown pb-4">
-              <a
-                href="#"
-                class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
-                id="dropdownUser1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <img
-                  src="../../assets/images/armedialogo.jpg"
-                  alt="User"
-                  width="30"
-                  height="30"
-                  class="rounded-circle"
-                />
-                <span class="d-none d-sm-inline mx-1">User</span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li><a class="dropdown-item" href="#">Sign out</a></li>
-              </ul>
-            </div>
-            <button
-              class="btn btn-outline-dark me-2"
-              onclick="window.location.href='/login'"
-            >
-              Login
-            </button>
-            <button
-              class="btn btn-dark"
-              onclick="window.location.href='/register'"
-            >
-              Register
-            </button>
           </div>
         </div>
       </nav>
     </header>
 
-    <div class="side-nav">
-      <div
-        class="d-flex flex-column align-items-center align-items-sm-start px-3 text-white"
-      >
-        <ul
-          class="nav flex-column align-items-center align-items-sm-start"
-          id="menu"
-        >
-          <li class="nav-item">
-            <a href="/homepage" class="nav-link align-middle px-0">
-              <i class="fs-4 bi-house"></i>
-              <span class="ms-1 d-none d-sm-inline">Home</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#submenu2"
-              data-bs-toggle="collapse"
-              class="nav-link px-0 align-middle"
-            >
-              <i class="fs-4 bi-bootstrap"></i>
-              <span class="ms-1 d-none d-sm-inline">CaseFile</span></a
-            >
-            <ul
-              class="collapse nav flex-column ms-1"
-              id="submenu2"
-              data-bs-parent="#menu"
-            >
-              <li class="w-100">
-                <a href="/allcases" class="nav-link px-0">
-                  <span class="d-none d-sm-inline">All Case Files</span></a
-                >
-              </li>
-              <li>
-                <a href="cases/:id" class="nav-link px-0">
-                  <span class="d-none d-sm-inline">Case-Details</span></a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a
-              href="#submenu3"
-              data-bs-toggle="collapse"
-              class="nav-link px-0 align-middle"
-            >
-              <i class="fs-4 bi-grid"></i>
-              <span class="ms-1 d-none d-sm-inline">People</span>
-            </a>
-            <ul
-              class="collapse nav flex-column ms-1"
-              id="submenu3"
-              data-bs-parent="#menu"
-            >
-              <li class="w-100">
-                <a href="/allpeople" class="nav-link px-0">
-                  <span class="d-none d-sm-inline">All Peoples</span></a
-                >
-              </li>
-              <li>
-                <a href="people/:id" class="nav-link px-0">
-                  <span class="d-none d-sm-inline">People-Details</span></a
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="nav-link px-0 align-middle">
-              <i class="fs-4 bi-people"></i>
-              <span class="ms-1 d-none d-sm-inline"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+ 
 
     <div class="content-area">
       <form (submit)="onSubmit($event)">

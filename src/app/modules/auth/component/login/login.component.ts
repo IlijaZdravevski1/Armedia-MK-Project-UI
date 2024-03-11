@@ -8,19 +8,34 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent {
   credentials = { username: '', password: '' };
+  isLoggedIn: boolean = false;
 
-  constructor(private authService: AuthService) {}
 
-  onLogin() {
-    const { username, password } = this.credentials;
-
-    this.authService.login({ username, password }).subscribe(
-      (res) => {
-        console.log(res);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+  constructor(public authService: AuthService) {}
+  ngOnInit(): void {
+    this.isLoggedIn = this.authService.isLoggedIn();
   }
+
+
+logout(): void {
+  this.authService.logout();
+    this.isLoggedIn = false;
+}
+
+onLogin() {
+  const { username, password } = this.credentials;
+
+  this.authService.login({ username, password }).subscribe(
+    (res) => {
+      console.log(res);
+      this.authService.setAuthToken(res.token);
+      this.isLoggedIn = true;
+      window.location.href = '/home';
+    },
+    (error) => {
+      console.error(error);
+      // this.error = 'Invalid username or password'; 
+    }
+  );
+}
 }
