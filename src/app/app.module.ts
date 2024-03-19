@@ -18,15 +18,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { HomeRoutingModule } from './modules/home/homeRouts';
 import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { JwtInterceptor } from './modules/auth/jwc-interceptor';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     AddressTabsComponent,
-    ContactMethodTabsComponent,
     WorkspaceComponent,
   ],
   imports: [
@@ -46,6 +46,7 @@ import { JwtInterceptor } from './modules/auth/jwc-interceptor';
     RouterModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     DatePipe,

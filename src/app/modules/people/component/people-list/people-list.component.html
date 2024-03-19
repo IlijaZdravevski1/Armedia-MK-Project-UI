@@ -1,31 +1,26 @@
-<!-- people-list.component.html --> 
-
+<!-- people-list.component.html -->
 
 <div class="container">
-    <div class="row mt-4">
-      <!-- Sidebar -->
-      <div class="col-sm-4">
-        <ul class="list-group">
-          <li class="list-group-item active" aria-current="true">
-            Active Persons
-          </li>
-          <li class="list-group-item" *ngFor="let person of people" (click)="person && person.id && navigateToPersonDetails(person.id)">
-            {{ person?.givenName }} {{ person?.familyName }}
-          </li>
-        </ul>
-      </div>
-      <div class="col-sm-8">
-      </div>
+  <div class="row mt-4">
+    <!-- Sidebar -->
+    <div class="col-sm-4">
+      <ul class="list-group">
+        <li class="list-group-item active" aria-current="true">
+          Active Persons
+          <button (click)="redirectToAddPersonForm()" class="btn btn-primary add-person-button">+ Add Person</button>
+        </li>
+        <li
+          class="list-group-item"
+          *ngFor="let person of people"
+          (click)="person && person.id && navigateToPersonDetails(person.id)"
+        >
+        <ng-template></ng-template>
+          {{ person.givenName }} {{ person.familyName }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-8">
+      <router-outlet></router-outlet>
     </div>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
+</div>

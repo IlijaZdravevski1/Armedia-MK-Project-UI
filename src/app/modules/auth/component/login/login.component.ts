@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 
@@ -11,7 +12,7 @@ export class LoginComponent {
   isLoggedIn: boolean = false;
 
 
-  constructor(public authService: AuthService) {}
+  constructor(public authService: AuthService, private router: Router) {}
   ngOnInit(): void {
     this.isLoggedIn = this.authService.isLoggedIn();
   }
@@ -30,7 +31,7 @@ onLogin() {
       console.log(res);
       this.authService.setAuthToken(res.token);
       this.isLoggedIn = true;
-      window.location.href = '/home';
+      this.router.navigate(['/home']);
     },
     (error) => {
       console.error(error);

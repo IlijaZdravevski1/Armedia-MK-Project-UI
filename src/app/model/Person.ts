@@ -8,6 +8,6 @@ export interface Person {
   familyName?: string;
   dateOfBirth?: string;
   placeOfBirth?: string;
-  postalAddresses?: PostalAddress[]; 
-  contactMethods?: ContactMethod[];
+  postalAddresses: PostalAddress[]; 
+  contactMethods: ContactMethod[];
 }

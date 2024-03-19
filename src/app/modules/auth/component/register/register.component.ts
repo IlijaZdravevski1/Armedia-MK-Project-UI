@@ -51,10 +51,9 @@ export class RegisterComponent {
     this.authService.register(this.user).subscribe({
       next: (res) => {
         console.log(res);
-        this.router.navigate(['/login']);
+        this.router.navigate(['login']); 
       },
       error: () => {},
     });
-
   }
 }

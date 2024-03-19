@@ -1,26 +1,29 @@
-
 @import "~bootstrap/dist/css/bootstrap.min.css";
-.custom-button {
-  background-color: #4CAF50; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.container{
+  margin-top: -46px;
+  margin-left: -32px;
+  width: 600px;
+}
+.list-group-item.active {
+  background-color: #343a40;
+  border-color: #343a40;
+  border-radius: 0%;
+}
+.btn.btn-primary.add-casefile-button{
+  background-color: green;
+  border-color: green;
+  margin-left: 285px;
 }
 
-.custom-button:hover {
-  background-color: #45a049; 
-}
 
-.custom-button:active {
-  background-color: #3e8e41; 
-}
+
+
+
+
+
 
 
   

@@ -1,4 +1,25 @@
-.list-group-item.active {
+
+
+.col-sm-4 {
+    position: absolute;
+    top: 135px; 
+    left: 188px; 
+  }
+  
+  .list-group-item.active {
     background-color: #343a40;
     border-color: #343a40;
-}
+    border-radius: 0%;
+  }
+  
+  .list-group {
+    position: sticky;
+    top: 20px; 
+  }
+  .btn.btn-primary.add-person-button{
+    margin-left: 270px;
+    background-color: green;
+    border-color: green;
+  }
+  
+  

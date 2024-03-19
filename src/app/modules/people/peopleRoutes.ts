@@ -1,7 +1,7 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-import { PeopleListComponent } from "./component/people-list/people-list.component";
-import { PersonDetailsComponent } from "./component/person-details/person-details.component";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { PeopleListComponent } from './component/people-list/people-list.component';
+import { PersonDetailsComponent } from './component/person-details/person-details.component';
 
 const routes: Routes = [
   {
@@ -10,14 +10,15 @@ const routes: Routes = [
     children: [
       {
         path: ':id',
-        component: PersonDetailsComponent
-      }
-    ]
+        pathMatch: 'prefix',
+        component: PersonDetailsComponent,
+      },
+    ],
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PeopleRoutingModule { }
+export class PeopleRoutingModule {}

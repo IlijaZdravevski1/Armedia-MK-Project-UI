@@ -1,0 +1,13 @@
+.container {
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+  
+  .name-class {
+    font-size: 20px;
+  }
+  .btn.btn-primary{
+    background-color: green;
+    
+  }
+  

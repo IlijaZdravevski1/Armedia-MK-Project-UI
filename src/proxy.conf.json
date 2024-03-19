@@ -6,6 +6,10 @@
     "/person": {
       "target": "http://localhost:9090",
       "secure": false
+    },
+    "/case-file": {
+      "target": "http://localhost:9090",
+      "secure": false
     }
   }
   

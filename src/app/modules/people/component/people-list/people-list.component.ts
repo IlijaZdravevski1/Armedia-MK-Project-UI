@@ -1,7 +1,9 @@
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { PeopleService } from '../peopleService';
 import { Person } from 'src/app/model/Person';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AddPersonModalComponent } from 'src/app/shared/components/add-person/add-person';
 
 @Component({
   selector: 'app-people-list',
@@ -9,32 +11,36 @@ import { Person } from 'src/app/model/Person';
   styleUrls: ['./people-list.component.css']
 })
 export class PeopleListComponent implements OnInit {
-  active = 1;
   people: Person[] = [];
   personId: string = '';
+  
 
 
-  constructor(private peopleService: PeopleService, private router : Router) { }
+  constructor(private peopleService: PeopleService, private router : Router, protected route: ActivatedRoute, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.loadPeople();
   }
   redirectToPersonDetails(): void {
     if (this.personId.trim() !== '') {
-      window.location.href = '/people:id', this.personId;
+      this.router.navigate(['/people:id', this.personId]);
     }
   }
+  redirectToAddPersonForm(){
+    const modalRef = this.modalService.open(AddPersonModalComponent);
+    modalRef.componentInstance.postalAddress = { title: '1' };
+    modalRef.result.then((res) => console.log(res));
+  }   
   getPersonDetails(personId: number) {
     this.peopleService.getPersonDetailsById(personId).subscribe((person) => {
       console.log(person); 
     });
   }
   navigateToPersonDetails(personId: number) {
-    this.router.navigate(['/people', personId]);
+    this.router.navigate(['/people', personId], {
+      relativeTo: this.route
+    });
   }
-
-
-
   loadPeople(): void {
     this.peopleService.getAllPeople().subscribe(
       (people: Person[]) => {

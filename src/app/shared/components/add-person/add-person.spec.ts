@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AddContactMethodModalComponent } from './add-contact-method-modal.component';
+import { AddContactMethodModalComponent } from '../add-contact-method-modal/add-contact-method-modal.component';
+
 
 describe('AddContactMethodModalComponent', () => {
   let component: AddContactMethodModalComponent;
