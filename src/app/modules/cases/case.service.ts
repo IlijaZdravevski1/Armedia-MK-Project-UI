@@ -19,4 +19,10 @@ export class CaseService {
     const url = `${this.apiUrl}/${id}/findById`;
     return this.http.get<CaseFile>(url);
   }
+  deleteCaseFile(id: number): Observable<void> {
+    const url = `${this.apiUrl}/${id}`
+    return this.http.delete<void>(url, {
+      responseType: 'text' as any,
+  });
+  }
 }
