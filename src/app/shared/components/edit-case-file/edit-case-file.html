@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit Case File</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="cancelEdit()"></button>
+</div>
+<div class="modal-body">
+    <form (ngSubmit)="updateCaseFile()" #caseFileForm="ngForm">
+        <div class="mb-3">
+            <label for="caseNumber" class="form-label">Case Number</label>
+            <input type="text" class="form-control" id="caseNumber" name="caseNumber" [(ngModel)]="editcaseFile.caseNumber" required>
+        </div>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="editcaseFile.title" required>
+        </div>
+        <div class="mb-3">
+            <label for="incidentDate" class="form-label">Incident Date</label>
+            <input type="date" class="form-control" id="incidentDate" name="incidentDate" [(ngModel)]="editcaseFile.incidentDate" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Edit</button>
+    </form>
+</div>

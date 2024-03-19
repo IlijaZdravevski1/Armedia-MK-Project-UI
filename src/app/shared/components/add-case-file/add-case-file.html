@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add New Case File</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+  </div>
+  <div class="modal-body">
+    <form (ngSubmit)="addCaseFile()" #caseFileForm="ngForm">
+      <div class="mb-3">
+        <label for="caseNumber" class="form-label">Case Number</label>
+        <input type="text" class="form-control" id="caseNumber" name="caseNumber" [(ngModel)]="newCaseFile.caseNumber" required>
+      </div>
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" [(ngModel)]="newCaseFile.title" required>
+      </div>
+      <div class="mb-3">
+        <label for="incidentDate" class="form-label">Incident Date</label>
+        <input type="date" class="form-control" id="incidentDate" name="incidentDate" [(ngModel)]="newCaseFile.incidentDate" required>
+      </div>
+      <div class="mb-3">
+        <label for="personId" class="form-label">Person ID</label>
+        <input type="text" class="form-control" id="personId" name="personId" [(ngModel)]="newCaseFile.personId" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+  
+  

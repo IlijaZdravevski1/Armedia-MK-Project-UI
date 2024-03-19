@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AddCaseFileComponent } from './add-case-file';
 
-import { ListComponent } from './list.component';
+
 
 describe('ListComponent', () => {
-  let component: ListComponent;
-  let fixture: ComponentFixture<ListComponent>;
+  let component: AddCaseFileComponent;
+  let fixture: ComponentFixture<AddCaseFileComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ListComponent]
+      declarations: [AddCaseFileComponent]
     });
-    fixture = TestBed.createComponent(ListComponent);
+    fixture = TestBed.createComponent(AddCaseFileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { EditCaseFileComponent } from './edit-case-file';
 
-import { ContactMethodsTableComponent } from './contact-methods-table.component';
+
 
 describe('ContactMethodsTableComponent', () => {
-  let component: ContactMethodsTableComponent;
-  let fixture: ComponentFixture<ContactMethodsTableComponent>;
+  let component: EditCaseFileComponent;
+  let fixture: ComponentFixture<EditCaseFileComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ContactMethodsTableComponent]
+      declarations: [EditCaseFileComponent]
     });
-    fixture = TestBed.createComponent(ContactMethodsTableComponent);
+    fixture = TestBed.createComponent(EditCaseFileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,1 +1,30 @@
-<p>add-postal-address-modal works!</p>
+<!-- add-postal-address-modal.component.html -->
+<div class="container">
+    <div class="modal-header">
+      <h2 class="name-class">Add New Postal Address</h2>
+      <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="postalAddressForm" (ngSubmit)="addPostalAddress()">
+        <div class="mb-3">
+          <label for="streetAddress" class="form-label">streetAddress</label>
+          <input type="text" class="form-control" id="streetAddress" formControlName="streetAddress" required>
+        </div>
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" formControlName="city" required>
+        </div>
+        <div class="mb-3">
+          <label for="zip" class="form-label">zip</label>
+          <input type="text" class="form-control" id="zip" formControlName="zip" required>
+        </div>
+        <div class="mb-3">
+          <label for="country" class="form-label">Country</label>
+          <input type="text" class="form-control" id="country" formControlName="country" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+  
+  

@@ -1,1 +1,39 @@
-<p>case-details works!</p>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="font-size: 17px;">Case Number</th>
+        <th style="font-size: 17px;">Title</th>
+        <th style="font-size: 17px;">Incident Date</th>
+        <th style="font-size: 17px;">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="!selectedCaseFile  else caseFileList">
+        <tr>
+          <td colspan="4">No case files</td>
+        </tr>
+      </ng-container>
+      <ng-template #caseFileList>
+        <tr>
+          <td style="font-size: 16px;">{{ selectedCaseFile.caseNumber }}</td>
+          <td style="font-size: 16px;">{{ selectedCaseFile.title }}</td>
+          <td style="font-size: 16px;">{{ selectedCaseFile.incidentDate }}</td>
+          <td>
+            <button (click)="editCaseFile(true, selectedCaseFile)" class="btn btn-sm btn-info">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+            <button (click)="deleteCaseFile()" class="btn btn-sm btn-danger">
+              <i class="fas fa-trash"></i> Delete
+            </button>
+          </td>
+        </tr>
+      </ng-template>
+    </tbody>
+  </table>
+  <router-outlet></router-outlet>
+</div>
+
+
+
+

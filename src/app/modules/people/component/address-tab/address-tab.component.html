@@ -1,1 +1,32 @@
-<p>address-tab works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Street Address</th>
+        <th>City</th>
+        <th>ZIP</th>
+        <th>Country</th>
+        <th>Action</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="!addresses || addresses.length <= 0; else addressList">
+        <tr>
+          <td colspan="5">No postal addresses</td> 
+        </tr>
+      </ng-container>
+      <ng-template #addressList>
+        <tr *ngFor="let address of addresses">
+          <td>{{ address.streetAddress }}</td>
+          <td>{{ address.city }}</td>
+          <td>{{ address.zip }}</td>
+          <td>{{ address.country }}</td>
+          <td>
+            <button (click)="editAddress()" class="btn btn-sm btn-info">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+          </td>
+        </tr>
+      </ng-template>
+    </tbody>
+  </table>
+  

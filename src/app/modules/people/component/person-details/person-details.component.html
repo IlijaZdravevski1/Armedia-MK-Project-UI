@@ -1,1 +1,64 @@
-<p>person-details works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Details</title>
+  <link rel="stylesheet" href="./person-details.component.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <ul class="list-group">
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <div class="row mb-3">
+        </div>
+        <div class="row">
+          <div *ngIf="selectedPerson">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">Person Details</h3>
+                <p class="card-text">
+                  <strong>Name:</strong> {{ selectedPerson.givenName }}<br>
+                  <strong>Family Name:</strong> {{ selectedPerson.familyName }}<br>
+                  <strong>Place Of Birth:</strong> {{ selectedPerson.placeOfBirth }}<br>
+                  <strong>Date Of Birth:</strong> {{ selectedPerson.dateOfBirth }}
+                </p>
+              </div>
+            </div>
+            <ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav-tabs">
+              <li [ngbNavItem]="1">
+                <button ngbNavLink>Contact Methods</button>
+                <ng-template ngbNavContent>
+                  <app-contact-methods-tab [contactMethod]="selectedPerson.contactMethods"></app-contact-methods-tab>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="2">
+                <button ngbNavLink>Addresses</button>
+                <ng-template ngbNavContent>
+                  <app-address-tab [addresses]="selectedPerson.postalAddresses"></app-address-tab>
+                </ng-template>
+              </li>
+              <li *ngIf="activeTab === 1">
+                <button (click)="redirectToContactMethodForm()" class="btn btn-primary">+ Add</button>
+              </li>
+              <li *ngIf="activeTab === 2">
+                <button (click)="redirectToPostalAddressForm()" class="btn btn-primary">+ Add</button>
+              </li>
+            </ul>
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
+          </div>
+        </div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+

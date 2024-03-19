@@ -1,1 +1,26 @@
-<p>contact-methods-tab works!</p>
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Value</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let method of contactMethod">
+          <td>{{ method.type }}</td>
+          <td>{{ method.value }}</td>
+          <td>{{ method.description }}</td>
+          <td>
+            <button (click)="editContactMethod(true, method)" class="btn btn-sm btn-info">
+              <i class="fas fa-edit"></i> Edit
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  

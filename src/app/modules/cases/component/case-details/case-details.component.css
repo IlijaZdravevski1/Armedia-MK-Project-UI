@@ -1,0 +1,46 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css";
+
+.container {
+    max-width: 700px;
+    margin: 20px auto; 
+    margin-left: 564px;
+    margin-top: -88px;
+}
+
+.table {
+    font-size: 14px;
+}
+
+.table th,
+.table td {
+    padding: 0.5rem;
+}
+
+.col-md-12 {
+    margin-right: auto; 
+    margin-left: 250px; 
+}
+
+.text-primary.mb-4 {
+    font-size: 20px;
+    color: black;
+    margin-top: -100px; 
+    margin-left: 0; 
+}
+
+.btn.btn-sm.btn-info{
+    background-color: #495057;
+    border-color: black;
+    color: white;
+}
+
+.btn.btn-sm.btn-info{
+    background-color: #495057;
+    border-color: black;
+    color: white;
+}
+
+
